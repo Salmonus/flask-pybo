@@ -1,7 +1,3 @@
-<!-- ---------------------------------------- [edit] ---------------------------------------- -->
-<title>파이보</title>
-<!-- ---------------------------------------------------------------------------------------- -->
-<!-- ---------------------------------------- [edit] ---------------------------------------- -->
 <!doctype html>
 <html lang="ko">
 <head>
@@ -15,10 +11,18 @@
     <title>Hello, pybo!</title>
 </head>
 <body>
+{% include "navbar.html" %}
 <!-- 기본 템플릿 안에 삽입될 내용 Start -->
 {% block content %}
 {% endblock %}
 <!-- 기본 템플릿 안에 삽입될 내용 End -->
+<!-- jQuery JS -->
+<script src="{{ url_for('static', filename='jquery-3.4.1.min.js') }}"></script>
+<!-- Bootstrap JS -->
+<script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+<!-- 자바스크립트 Start -->
+{% block script %}
+{% endblock %}
+<!-- 자바스크립트 End -->
 </body>
 </html>
-<!-- ---------------------------------------------------------------------------------------- -->
